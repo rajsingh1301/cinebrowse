@@ -1,0 +1,242 @@
+[
+  {
+    "id": 1,
+    "title": "The Silent Horizon",
+    "description": "An astronaut faces the unknown in deep space while confronting inner fears.",
+    "genre": "Sci-Fi",
+    "rating": 8.6,
+    "type": "Movie",
+    "year": 2022,
+    "image": "/images/posters/1.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Neon Streets",
+    "description": "A gritty detective hunts a cyber-criminal in a futuristic city.",
+    "genre": "Thriller",
+    "rating": 7.9,
+    "type": "Series",
+    "year": 2021,
+    "image": "/images/posters/2.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Bamboo Spirits",
+    "description": "A village guardian awakens to save the forest from a looming threat.",
+    "genre": "Fantasy",
+    "rating": 8.2,
+    "type": "Anime",
+    "year": 2019,
+    "image": "/images/posters/3.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Crimson Harbor",
+    "description": "A family drama unfolds in a coastal town amid old rivalries.",
+    "genre": "Drama",
+    "rating": 7.1,
+    "type": "Movie",
+    "year": 2020,
+    "image": "/images/posters/4.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Quantum Heist",
+    "description": "A team attempts the ultimate bank job using time-bending tech.",
+    "genre": "Action",
+    "rating": 8.9,
+    "type": "Movie",
+    "year": 2023,
+    "image": "/images/posters/5.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Echoes of Summer",
+    "description": "Childhood friends reunite and rediscover their bonds.",
+    "genre": "Romance",
+    "rating": 7.4,
+    "type": "Movie",
+    "year": 2018,
+    "image": "/images/posters/6.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Iron Lotus",
+    "description": "A young warrior seeks mastery in a land torn by war.",
+    "genre": "Fantasy",
+    "rating": 8.0,
+    "type": "Anime",
+    "year": 2017,
+    "image": "/images/posters/7.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Delta Protocol",
+    "description": "A special unit uncovers a conspiracy threatening world peace.",
+    "genre": "Action",
+    "rating": 7.7,
+    "type": "Series",
+    "year": 2020,
+    "image": "/images/posters/8.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Cobalt Skies",
+    "description": "Pilots push their limits in an elite aerial squadron.",
+    "genre": "Adventure",
+    "rating": 7.8,
+    "type": "Movie",
+    "year": 2016,
+    "image": "/images/posters/9.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Harbor Lights",
+    "description": "An ensemble cast weaves stories of hope and loss.",
+    "genre": "Drama",
+    "rating": 7.0,
+    "type": "Series",
+    "year": 2015,
+    "image": "/images/posters/10.jpg"
+  },
+  {
+    "id": 11,
+    "title": "Astral Academy",
+    "description": "Students harness cosmic forces at a mysterious school.",
+    "genre": "Sci-Fi",
+    "rating": 8.1,
+    "type": "Anime",
+    "year": 2022,
+    "image": "/images/posters/11.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Night Run",
+    "description": "An ex-racer is pulled into one last high-stakes job.",
+    "genre": "Thriller",
+    "rating": 7.6,
+    "type": "Movie",
+    "year": 2019,
+    "image": "/images/posters/12.jpg"
+  },
+  {
+    "id": 13,
+    "title": "Starlight Paradox",
+    "description": "A physicist races to resolve a cosmic anomaly that could fold the galaxy.",
+    "genre": "Sci-Fi",
+    "rating": 8.7,
+    "type": "Movie",
+    "year": 2024,
+    "image": "/images/posters/13.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Midnight Trace",
+    "description": "A quiet analyst uncovers a pattern linking unsolved crimes across decades.",
+    "genre": "Thriller",
+    "rating": 7.8,
+    "type": "Series",
+    "year": 2022,
+    "image": "/images/posters/14.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Grove of Whispers",
+    "description": "Spirits guide a young adventurer through a forest of living legends.",
+    "genre": "Fantasy",
+    "rating": 8.3,
+    "type": "Anime",
+    "year": 2020,
+    "image": "/images/posters/15.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Ashes and Embers",
+    "description": "Two siblings confront a buried past that threatens their fragile peace.",
+    "genre": "Drama",
+    "rating": 7.2,
+    "type": "Movie",
+    "year": 2021,
+    "image": "/images/posters/16.jpg"
+  },
+  {
+    "id": 17,
+    "title": "Crimson Velocity",
+    "description": "An elite driver is forced into a relentless chase to clear their name.",
+    "genre": "Action",
+    "rating": 8.5,
+    "type": "Movie",
+    "year": 2024,
+    "image": "/images/posters/17.jpg"
+  },
+  {
+    "id": 18,
+    "title": "Hearts in Echo",
+    "description": "A composer and a painter rediscover love through a shared masterpiece.",
+    "genre": "Romance",
+    "rating": 7.5,
+    "type": "Movie",
+    "year": 2019,
+    "image": "/images/posters/18.jpg"
+  },
+  {
+    "id": 19,
+    "title": "Skyward Bound",
+    "description": "A crew of explorers charts an unclaimed sky archipelago.",
+    "genre": "Adventure",
+    "rating": 7.9,
+    "type": "Movie",
+    "year": 2018,
+    "image": "/images/posters/19.jpg"
+  },
+  {
+    "id": 20,
+    "title": "Neon Protocol",
+    "description": "A tactical unit unravels a corporate plot with global stakes.",
+    "genre": "Action",
+    "rating": 7.6,
+    "type": "Series",
+    "year": 2021,
+    "image": "/images/posters/20.jpg"
+  },
+  {
+    "id": 21,
+    "title": "Quantum Sonata",
+    "description": "Students at a cosmic academy tune reality with harmonics of time.",
+    "genre": "Sci-Fi",
+    "rating": 8.4,
+    "type": "Anime",
+    "year": 2023,
+    "image": "/images/posters/21.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Shadows at Dusk",
+    "description": "A small-town police chief faces a case that hits too close to home.",
+    "genre": "Thriller",
+    "rating": 7.7,
+    "type": "Movie",
+    "year": 2020,
+    "image": "/images/posters/22.jpg"
+  },
+  {
+    "id": 23,
+    "title": "Veil of Thorns",
+    "description": "Rival houses vie for a crown cursed by an ancient pact.",
+    "genre": "Fantasy",
+    "rating": 7.8,
+    "type": "Series",
+    "year": 2017,
+    "image": "/images/posters/23.jpg"
+  },
+  {
+    "id": 24,
+    "title": "Harbor of Secrets",
+    "description": "Lives intersect in a port city where every arrival brings a new truth.",
+    "genre": "Drama",
+    "rating": 7.1,
+    "type": "Series",
+    "year": 2016,
+    "image": "/images/posters/24.jpg"
+  }
+]

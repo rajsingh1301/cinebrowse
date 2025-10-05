@@ -1,0 +1,412 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* switch default theme to Netflix-like dark and red brand */
+  --background: oklch(0.14 0.02 260); /* near-black */
+  --foreground: oklch(0.985 0.01 260); /* near-white */
+
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.62 0.25 29); /* Netflix red */
+  --primary-foreground: oklch(0.99 0.01 29);
+
+  --secondary: oklch(0.22 0.02 260); /* dark surface */
+  --secondary-foreground: var(--foreground);
+
+  --muted: oklch(0.27 0.02 260); /* subtle dark gray */
+  --muted-foreground: oklch(0.75 0.02 260);
+
+  --accent: oklch(0.3 0.02 260); /* slightly lighter gray for hovers */
+  --accent-foreground: var(--foreground);
+
+  --destructive: oklch(0.55 0.22 29); /* red tone for destructive */
+  --destructive-foreground: oklch(0.99 0.01 29);
+
+  --border: oklch(0.28 0.02 260);
+  --input: var(--border);
+  --ring: oklch(0.62 0.15 29); /* red-tinted focus ring */
+
+  /* keep charts within palette family */
+  --chart-1: var(--primary);
+  --chart-2: oklch(0.75 0.02 260);
+  --chart-3: oklch(0.45 0.02 260);
+  --chart-4: oklch(0.35 0.02 260);
+  --chart-5: oklch(0.25 0.02 260);
+
+  --radius: 0.5rem;
+
+  --sidebar: var(--secondary);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: oklch(0.15 0.02 255); /* Deep blue-black */
+  --foreground: oklch(0.985 0.01 255);
+
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+
+  --primary: oklch(0.75 0.12 255); /* Bright blue for buttons/links */
+  --primary-foreground: oklch(0.985 0.01 255);
+
+  --secondary: oklch(0.25 0.03 255); /* Dim blue surface */
+  --secondary-foreground: oklch(0.985 0.01 255);
+
+  --muted: oklch(0.25 0.02 255);
+  --muted-foreground: oklch(0.7 0.02 255);
+
+  --accent: oklch(0.74 0.13 80); /* Warm amber accent */
+  --accent-foreground: oklch(0.17 0.03 80);
+
+  --destructive: oklch(0.5 0.2 29);
+  --destructive-foreground: oklch(0.985 0.01 255);
+
+  --border: oklch(0.28 0.02 255);
+  --input: oklch(0.28 0.02 255);
+  --ring: oklch(0.55 0.1 255);
+
+  --chart-1: oklch(0.7 0.12 255);
+  --chart-2: oklch(0.74 0.13 80);
+  --chart-3: oklch(0.52 0.1 255);
+  --chart-4: oklch(0.8 0.11 80);
+  --chart-5: oklch(0.42 0.1 255);
+
+  --sidebar: oklch(0.2 0.02 255);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--secondary);
+  --sidebar-accent-foreground: var(--secondary-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+/* Genre-based theme palettes and heading typography
+   Keep 3–5 colors per theme (1 primary + neutrals + 1 accent), reuse variables. */
+
+.theme-default {
+  --background: oklch(0.14 0.02 260);
+  --foreground: oklch(0.985 0.01 260);
+  --primary: oklch(0.62 0.25 29); /* red */
+  --accent: oklch(0.3 0.02 260); /* gray hover */
+  --muted: oklch(0.27 0.02 260); /* gray */
+  --secondary: oklch(0.22 0.02 260);
+  --border: oklch(0.28 0.02 260);
+  --ring: oklch(0.62 0.15 29);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.99 0.01 29);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.75 0.02 260);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 29);
+  --input: var(--border);
+  --chart-1: var(--primary);
+  --chart-2: oklch(0.75 0.02 260);
+  --chart-3: oklch(0.45 0.02 260);
+  --chart-4: oklch(0.35 0.02 260);
+  --chart-5: oklch(0.25 0.02 260);
+}
+.theme-default h1,
+.theme-default h2,
+.theme-default h3,
+.theme-default h4,
+.theme-default h5,
+.theme-default h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0;
+}
+
+/* Sci‑Fi: deep navy background, cyan primary, neon accent; headings in mono */
+.theme-sci-fi {
+  --background: oklch(0.16 0.03 250);
+  --foreground: oklch(0.985 0.01 250);
+  --primary: oklch(0.75 0.12 230); /* cyan */
+  --accent: oklch(0.8 0.16 150); /* lime/green accent */
+  --muted: oklch(0.25 0.03 250);
+  --secondary: oklch(0.22 0.02 250);
+  --border: oklch(0.28 0.02 250);
+  --ring: oklch(0.62 0.12 230);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.985 0.01 230);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.7 0.02 250);
+  --accent-foreground: oklch(0.17 0.03 150);
+  --destructive: oklch(0.5 0.2 29);
+  --destructive-foreground: oklch(0.985 0.01 250);
+  --input: var(--border);
+}
+.theme-sci-fi h1,
+.theme-sci-fi h2,
+.theme-sci-fi h3,
+.theme-sci-fi h4,
+.theme-sci-fi h5,
+.theme-sci-fi h6 {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Action: near-black background, vivid orange-red primary, warm yellow accent */
+.theme-action {
+  --background: oklch(0.13 0.02 260);
+  --foreground: oklch(0.99 0.01 260);
+  --primary: oklch(0.68 0.2 40); /* orange-red */
+  --accent: oklch(0.8 0.12 85); /* warm yellow */
+  --muted: oklch(0.26 0.02 260);
+  --secondary: oklch(0.21 0.02 260);
+  --border: oklch(0.28 0.02 260);
+  --ring: oklch(0.6 0.15 40);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.99 0.01 40);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.73 0.02 260);
+  --accent-foreground: oklch(0.17 0.03 85);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 260);
+  --input: var(--border);
+}
+.theme-action h1,
+.theme-action h2,
+.theme-action h3,
+.theme-action h4,
+.theme-action h5,
+.theme-action h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0.015em;
+  text-transform: none;
+}
+
+/* Drama: charcoal background, gold primary, burgundy accent */
+.theme-drama {
+  --background: oklch(0.18 0.02 260);
+  --foreground: oklch(0.985 0.01 260);
+  --primary: oklch(0.82 0.12 85); /* gold */
+  --accent: oklch(0.5 0.15 25); /* burgundy */
+  --muted: oklch(0.27 0.02 260);
+  --secondary: oklch(0.23 0.02 260);
+  --border: oklch(0.3 0.02 260);
+  --ring: oklch(0.7 0.1 85);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.17 0.03 85);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.75 0.02 260);
+  --accent-foreground: oklch(0.985 0.01 25);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 260);
+  --input: var(--border);
+}
+.theme-drama h1,
+.theme-drama h2,
+.theme-drama h3,
+.theme-drama h4,
+.theme-drama h5,
+.theme-drama h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Fantasy: midnight background, emerald primary, soft gold accent; headings in mono for a runic feel */
+.theme-fantasy {
+  --background: oklch(0.16 0.03 210);
+  --foreground: oklch(0.985 0.01 210);
+  --primary: oklch(0.7 0.12 150); /* emerald */
+  --accent: oklch(0.82 0.12 85); /* gold */
+  --muted: oklch(0.26 0.03 210);
+  --secondary: oklch(0.22 0.02 210);
+  --border: oklch(0.3 0.02 210);
+  --ring: oklch(0.65 0.1 150);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.17 0.03 150);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.72 0.02 210);
+  --accent-foreground: oklch(0.17 0.03 85);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 210);
+  --input: var(--border);
+}
+.theme-fantasy h1,
+.theme-fantasy h2,
+.theme-fantasy h3,
+.theme-fantasy h4,
+.theme-fantasy h5,
+.theme-fantasy h6 {
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular;
+  letter-spacing: 0.01em;
+}
+
+/* Thriller: coal background, icy blue primary, amber accent */
+.theme-thriller {
+  --background: oklch(0.14 0.02 255);
+  --foreground: oklch(0.985 0.01 255);
+  --primary: oklch(0.74 0.12 235); /* icy blue */
+  --accent: oklch(0.78 0.13 80); /* amber */
+  --muted: oklch(0.25 0.02 255);
+  --secondary: oklch(0.22 0.02 255);
+  --border: oklch(0.29 0.02 255);
+  --ring: oklch(0.6 0.1 235);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.985 0.01 235);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.7 0.02 255);
+  --accent-foreground: oklch(0.17 0.03 80);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 255);
+  --input: var(--border);
+}
+.theme-thriller h1,
+.theme-thriller h2,
+.theme-thriller h3,
+.theme-thriller h4,
+.theme-thriller h5,
+.theme-thriller h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0.01em;
+}
+
+/* Romance (light): soft off-white background, rose primary, warm gray neutrals */
+.theme-romance {
+  --background: oklch(0.98 0.01 20);
+  --foreground: oklch(0.2 0.02 20);
+  --primary: oklch(0.74 0.16 20); /* rose */
+  --accent: oklch(0.9 0.03 90); /* light warm gray */
+  --muted: oklch(0.92 0.02 90);
+  --secondary: oklch(0.96 0.01 90);
+  --border: oklch(0.9 0.01 90);
+  --ring: oklch(0.7 0.1 20);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.18 0.03 20);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.4 0.02 20);
+  --accent-foreground: var(--foreground);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 20);
+  --input: var(--border);
+}
+.theme-romance h1,
+.theme-romance h2,
+.theme-romance h3,
+.theme-romance h4,
+.theme-romance h5,
+.theme-romance h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0;
+}
+
+/* Adventure: deep ocean navy, orange primary, teal accent */
+.theme-adventure {
+  --background: oklch(0.15 0.03 240);
+  --foreground: oklch(0.985 0.01 240);
+  --primary: oklch(0.7 0.2 60); /* orange */
+  --accent: oklch(0.7 0.13 190); /* teal */
+  --muted: oklch(0.26 0.03 240);
+  --secondary: oklch(0.22 0.02 240);
+  --border: oklch(0.29 0.02 240);
+  --ring: oklch(0.62 0.14 60);
+  --card: var(--background);
+  --card-foreground: var(--foreground);
+  --popover: var(--background);
+  --popover-foreground: var(--foreground);
+  --primary-foreground: oklch(0.99 0.01 60);
+  --secondary-foreground: var(--foreground);
+  --muted-foreground: oklch(0.72 0.02 240);
+  --accent-foreground: oklch(0.17 0.03 190);
+  --destructive: oklch(0.55 0.22 29);
+  --destructive-foreground: oklch(0.99 0.01 240);
+  --input: var(--border);
+}
+.theme-adventure h1,
+.theme-adventure h2,
+.theme-adventure h3,
+.theme-adventure h4,
+.theme-adventure h5,
+.theme-adventure h6 {
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui;
+  letter-spacing: 0.005em;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
